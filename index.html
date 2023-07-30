@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Earth Observatory Natural Event Tracker</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>NASA Earth Observatory Natural Event Tracker</h1>
+        <p>Track Natural Events Around the World</p>
+    </header>
+    <main class="container mt-4">
+        <div class="form-group">
+            <label for="event-type">Select an Event Type:</label>
+            <select id="event-type" class="form-control">
+                <option value="Wildfires">Wildfires</option>
+                <option value="Earthquakes">Earthquakes</option>
+                <!-- Add other event types as needed -->
+            </select>
+            <button id="submit-btn" class="btn btn-primary mt-2">Get Event Count</button>
+        </div>
+        <div id="event-count" class="mt-4"></div>
+        <!-- Map container -->
+        <div id="map-container" class="mt-4" style="height: 500px;"></div>
+    </main>
+    <!-- Include Bootstrap JS and jQuery (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include Leaflet and scripts.js -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
