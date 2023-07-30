@@ -22,7 +22,9 @@ function mapEventTypeToCategoryID(eventType) {
     // Define a mapping of Event Type to Category ID
     const eventTypeToCategoryID = {
         'Wildfires': 8,
-        'Sea & Lake Ice': 15,
+        'Sea and Lake Ice': 15,
+        'Severe Storms': 10,
+        'Volcanoes': 12,
         // Add other event types and corresponding category IDs as needed
     };
     // Return the corresponding Category ID, or null if not found
@@ -76,11 +78,14 @@ function renderMapMarkers(events) {
 
     // Create markers for each event's latitude and longitude
     events.forEach(event => {
-        const { geometries } = event;
+        const { geometries, title } = event;
         if (geometries && geometries.length > 0) {
             const lat = geometries[0].coordinates[1];
             const lon = geometries[0].coordinates[0];
-            L.marker([lat, lon]).addTo(map);
+
+            // Create a marker and bind a popup with the event title
+            const marker = L.marker([lat, lon]).addTo(map);
+            marker.bindPopup(title);
         }
     });
 }
