@@ -22,7 +22,7 @@ function mapEventTypeToCategoryID(eventType) {
     // Define a mapping of Event Type to Category ID
     const eventTypeToCategoryID = {
         'Wildfires': 8,
-        'Earthquakes': 15,
+        'Sea & Lake Ice': 15,
         // Add other event types and corresponding category IDs as needed
     };
     // Return the corresponding Category ID, or null if not found
