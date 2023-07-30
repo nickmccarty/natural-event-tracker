@@ -65,16 +65,14 @@ async function handleUserInput() {
     }
 }
 
-// Function to render markers on the map
+// Function to render markers on the map with date in the popup
 function renderMapMarkers(events) {
-    // Clear existing markers, if any
-    if (map) {
-        map.eachLayer(layer => {
-            if (layer instanceof L.Marker) {
-                map.removeLayer(layer);
-            }
-        });
-    }
+    // Clear existing markers from the map
+    map.eachLayer(layer => {
+        if (layer instanceof L.Marker) {
+            map.removeLayer(layer);
+        }
+    });
 
     // Create markers for each event's latitude and longitude
     events.forEach(event => {
@@ -82,13 +80,18 @@ function renderMapMarkers(events) {
         if (geometries && geometries.length > 0) {
             const lat = geometries[0].coordinates[1];
             const lon = geometries[0].coordinates[0];
+            const date = new Date(geometries[0].date).toDateString();
 
-            // Create a marker and bind a popup with the event title
-            const marker = L.marker([lat, lon]).addTo(map);
-            marker.bindPopup(title);
+            // Create a marker and bind a popup with the event title and date
+            const marker = L.marker([lat, lon]);
+            marker.bindPopup(`<b>${title}</b><br><hr>${date}`);
+
+            // Add the marker to the map
+            marker.addTo(map);
         }
     });
 }
+
 
 // Function to initialize the map
 function initMap() {
