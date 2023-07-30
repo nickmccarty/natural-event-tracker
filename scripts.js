@@ -84,7 +84,7 @@ function renderMapMarkers(events) {
 
             // Create a marker and bind a popup with the event title and date
             const marker = L.marker([lat, lon]);
-            marker.bindPopup(`<b>${title}</b><br><hr>${date}`);
+            marker.bindPopup(`<b>${title}</b><<hr>${date}`);
 
             // Add the marker to the map
             marker.addTo(map);
