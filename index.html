@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Include Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
     <header class="bg-primary text-white text-center py-4">
@@ -24,15 +27,42 @@
                 <option value="Volcanoes">Volcanoes</option>
                 <!-- Add other event types as needed -->
             </select>
+            <br>
             <button id="submit-btn" class="btn btn-primary mt-2">Load Events</button>
         </div>
         <div id="event-count" class="mt-4"></div>
+        <hr>
         <!-- Map container -->
-        <div id="map-container" class="mt-4" style="height: 500px;"></div>
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <div id="chart-container">
+                        <div id="line-chart"></div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="table-container">
+                        <table id="event-table">
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Table rows will be added dynamically using JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="map-container" class="mt-4" style="height: 400px;"></div>
+        <br>
     </main>
     <!-- Include Bootstrap JS and jQuery (required for Bootstrap) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Include Leaflet and scripts.js -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>

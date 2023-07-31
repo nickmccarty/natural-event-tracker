@@ -1,0 +1,77 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.column {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* Added styles for the chart container and the table container */
+#chart-container {
+    flex: 1;
+}
+
+#table-container {
+    flex: 1;
+}
+
+/* Additional styles for the line chart */
+#line-chart {
+    width: 100%;
+    height: 400px;
+}
+
+/* Additional styles for the event table */
+#event-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#event-table th,
+#event-table td {
+    padding: 12px;
+}
+
+/* Striped rows */
+#event-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Interactive on hover */
+#event-table tbody tr:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+/* Table header style */
+#event-table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+/* Table footer style */
+#event-table tfoot td {
+    font-weight: bold;
+}
+
+/* Center the table and map when the screen size is smaller */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    #table-container, #map-container {
+        margin: 0 auto;
+    }
+}
