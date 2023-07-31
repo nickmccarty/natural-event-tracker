@@ -1,3 +1,19 @@
+#header {
+    /* background-color: red; */
+    background-image: linear-gradient(to bottom right, teal, purple);    /* padding: 20px;
+    text-align: center;
+    color: white; */
+    opacity: 70%;
+}
+
+#submit-btn {
+    /* background-color: red; */
+    background-image: linear-gradient(to right top, #89cff0, pink);    /* padding: 20px;
+    text-align: center;
+    color: white; */
+    opacity: 70%;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
