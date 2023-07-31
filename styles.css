@@ -75,3 +75,17 @@
         margin: 0 auto;
     }
 }
+
+#submit-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    margin-top: 10px;
+}
