@@ -12,10 +12,13 @@
 </head>
 <body>
     <header id = "header" class="bg-primary text-white text-center py-4">
-        <h1 style="text-shadow: 2px 2px 2px black;">NASA Earth Observatory Natural Event Tracker</h1>
-        <p style="text-shadow: 2px 2px 2px black;">Track Natural Events Around the World</p>
-    </header>
+        <h1 style="text-shadow: 2px 2px 2px black;">NASA Earth Observatory Natural Event Tracker (<a href="https://eonet.gsfc.nasa.gov/docs/v2.1">EONET</a>)</h1>
+        <h2 style="text-shadow: 2px 2px 2px black;">API Test</h2>
+    </header>    
     <main class="container mt-4">
+        <div id = "warning" class="alert alert-primary" role="alert">
+            Note: The NASA EONET API appears to be producing results that are incomplete.
+        </div>
         <div class="form-group">
             <label for="event-type">Select an Event Type:</label>
             <select id="event-type" class="form-control">

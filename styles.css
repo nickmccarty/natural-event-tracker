@@ -105,3 +105,8 @@
 .button-container button {
     margin-top: 10px;
 }
+
+#warning {
+    display: flex;
+    justify-content: center;
+}
